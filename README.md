@@ -20,3 +20,9 @@ password=abcdef1234
 docker run --rm -it --gpus=all -e NVIDIA_DRIVER_CAPABILITIES=all -v ./filtered_raws:/home/ubuntu/mnt:ro -v ./results:/home/ubuntu/Results:rw -v ./configs:/home/ubuntu/Configs:rw -v ./FSL-07D:/home/ubuntu/calibrations:ro -v ./scripts:/home/ubuntu/scripts:ro --shm-size=10.24gb `whoami`/fishsense-lite
 ```
 See `scripts/02_docker_run.sh`
+7. Prep the docker environment
+
+`scripts/03_docker_prep.sh`
+```
+fsl generate-ray-config --max-cpu 8 --max-gpu 1
+```
