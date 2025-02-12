@@ -1,0 +1,3 @@
+[submodule "fishsense-lite"]
+	path = fishsense-lite
+	url = https://github.com/UCSD-E4E/fishsense-lite.git
