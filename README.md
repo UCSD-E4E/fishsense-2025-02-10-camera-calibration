@@ -64,3 +64,4 @@ Password: ********
 File Filter Regex: .*JPG
 Treat every bucket object as a source file: True
 ```
+11. Export the label studio project results into ./label_studio_results
