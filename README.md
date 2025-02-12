@@ -85,3 +85,7 @@ fsl calibrate-laser ./raw_data/ED-00/FSL-11/LaserCalibration/*.ORF \
     --output ./Results/FSL-11D/fsl-11d-laser.pkg \
     -j ./label_studio_results/project-35-at-2025-02-12-03-03-3fb00dba.json
 ```
+13. Check results in command line output
+
+## Notes
+Currently failing on step 12 on kastner-ml
