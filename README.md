@@ -89,4 +89,6 @@ fsl calibrate-laser ./raw_data/ED-00/FSL-09/LaserCalibration/*.ORF \
 14. Check results in command line output
 
 ## Notes
-Currently failing on step 12 on kastner-ml
+FSL-11D passes with 0.054 RMS
+
+FSL-09D passes with 0.032 RMS
