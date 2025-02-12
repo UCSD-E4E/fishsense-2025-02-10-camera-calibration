@@ -8,6 +8,10 @@ fi
 if mount | grep '//e4e-nas.ucsd.edu/fishsense/Fishsense Lite Calibration Parameters/FSL-11D' > /dev/null; then
     sudo umount ./lens_cal/FSL-11D
 fi
+if mountpoint -q ./label_studio; then
+    sudo umount ./label_studio
+fi
+
 if [ -d './data' ]; then
     rmdir ./data
 fi

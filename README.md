@@ -37,3 +37,30 @@ fsl preprocess ./raw_data/ED-00/FSL-11/LaserCalibration/*.ORF --format JPG \
     --lens-calibration ./calibrations/FSL-11D/fsl-11d-lens-raw.pkg \
     --output Results/FSL-11D/processed_lasers/
 ```
+9. Copy images to label studio.  Note that this should be done outside of docker
+
+`scripts/05_copy_label_studio_data.sh`
+10. Set up https://labeler.e4e.ucsd.edu
+
+Labeling Interface:
+```
+<View>
+  <KeyPointLabels name="kp-1" toName="img-1">
+    <Label value="Red Laser" background="red"/>
+    <Label value="Green Laser" background="green"/>
+  </KeyPointLabels>
+  <Image name="img-1" value="$img" zoom="true" zoomControl="true"/>
+</View>
+```
+
+Storage backend:
+```
+Storage Type: Synology
+Storage Title: 2025-02-10_fs_data
+URL: https://e4e-nas.ucsd.edu:6021
+Path: /label_studio/2025-02-10_fs_data
+Username: label_studio
+Password: ********
+File Filter Regex: .*JPG
+Treat every bucket object as a source file: True
+```
